@@ -68,3 +68,14 @@ input[type="checkbox"] {
 label {
   border-bottom: 2px dotted #395222;
 }
+
+.dark-mode {
+  display: flex;
+  flex-direction: row-reverse;
+  margin: 20px;
+}
+
+.dark-mode-icons {
+  width: 40px;
+  cursor: pointer;
+}
