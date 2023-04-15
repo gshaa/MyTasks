@@ -2,9 +2,10 @@ const taskForm = document.getElementById("task-form");
 const taskInput = document.getElementById("task-input");
 const taskList = document.getElementById("task-list");
 const removeButton = document.getElementById("remove-all-button");
-const darkIcons = document.querySelectorAll("dark-mode-icons");
-const sunIcon = document.getElementById("sun-icon");
-const moonIcon = document.getElementById("moon-icon");
+
+const darkModeButton = document.getElementById("dark-mode-button");
+const moonImage = document.getElementById("moon-image");
+const sunImage = document.getElementById("sun-image");
 
 window.addEventListener("load", () => {
   const tasks = JSON.parse(localStorage.getItem("tasks")) || [];
@@ -72,3 +73,9 @@ removeButton.addEventListener("click", (e) => {
     localStorage.removeItem("tasks");
   }, 100);
 });
+
+darkModeButton.onclick = function () {
+  document.querySelector("body").classList.toggle("dark-mode-style");
+  moonImage.classList.toggle("hidden");
+  sunImage.classList.toggle("hidden");
+};

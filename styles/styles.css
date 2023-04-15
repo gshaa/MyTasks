@@ -4,7 +4,14 @@
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
 }
+
+body {
+  position: relative;
+}
+
 .task-container {
+  position: relative;
+  top: 50px;
   max-width: 500px;
   margin: 0 auto;
   padding: 20px;
@@ -27,7 +34,7 @@ input[type="text"] {
 
 .add-task-button {
   padding: 8px;
-  background-color: #007bff;
+  background-color: #0068d7;
   color: #fff;
   border: none;
   cursor: pointer;
@@ -40,7 +47,7 @@ input[type="text"] {
 
 .remove-all-button {
   padding: 8px;
-  background-color: #fb3030;
+  background-color: #d61818;
   color: #fff;
   border: none;
   cursor: pointer;
@@ -69,13 +76,34 @@ label {
   border-bottom: 2px dotted #395222;
 }
 
-.dark-mode {
-  display: flex;
-  flex-direction: row-reverse;
-  margin: 20px;
+.dark-mode-style {
+  background-color: #000;
+  color: #fff;
 }
 
-.dark-mode-icons {
+.light-mode-style {
+  background-color: #fff;
+  color: black;
+}
+
+.dark-mode-button {
+  position: absolute;
+  right: 20px;
+  top: 20px;
   width: 40px;
+  height: 40px;
   cursor: pointer;
+}
+
+.dark-mode-button svg {
+  width: 40px;
+  height: 40px;
+}
+
+.dark-mode-button:hover {
+  opacity: 0.7;
+}
+
+.hidden {
+  display: none;
 }
