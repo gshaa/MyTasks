@@ -74,8 +74,29 @@ removeButton.addEventListener("click", (e) => {
   }, 100);
 });
 
+var selectedTheme = "white";
+
 darkModeButton.onclick = function () {
   document.querySelector("body").classList.toggle("dark-mode-style");
   moonImage.classList.toggle("hidden");
   sunImage.classList.toggle("hidden");
+
+  if (selectedTheme === "white") {
+    selectedTheme = "dark";
+    localStorage.setItem("theme", selectedTheme);
+  } else {
+    selectedTheme = "white";
+    localStorage.setItem("theme", selectedTheme);
+  }
 };
+
+document.addEventListener("DOMContentLoaded", function () {
+  selectedTheme = localStorage.getItem("theme");
+  if (selectedTheme === "dark") {
+    document.querySelector("body").classList.toggle("dark-mode-style");
+    moonImage.classList.toggle("hidden");
+    sunImage.classList.toggle("hidden");
+  } else {
+    return;
+  }
+});
