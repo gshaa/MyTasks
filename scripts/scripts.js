@@ -53,12 +53,11 @@ taskList.addEventListener("change", function (event) {
   if (checkbox.checked) {
     setTimeout(() => {
       const taskItem = checkbox.parentNode;
-      taskItem.remove();
-
       const tasks = JSON.parse(localStorage.getItem("tasks"));
       const taskIndex = Array.from(taskList.children).indexOf(taskItem);
       tasks.splice(taskIndex, 1);
       localStorage.setItem("tasks", JSON.stringify(tasks));
+      taskItem.remove();
     }, 100);
   }
 });

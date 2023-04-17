@@ -39,7 +39,7 @@ input[type="text"] {
   border: 1px solid black;
   border-radius: 5px;
   font-size: 16px;
-  width: 800px;
+  width: 200px;
 }
 
 .add-task-button {
@@ -137,4 +137,27 @@ label {
 
 .hidden {
   display: none;
+}
+
+@media (max-width: 500px) {
+  .task-container {
+    top: 60px;
+    max-width: 320px;
+  }
+  input[type="text"] {
+    font-size: 16px;
+    width: 150px;
+  }
+  .div-task {
+    font-size: 16px;
+  }
+  label {
+    max-width: 250px;
+  }
+  .remove-all-button {
+    font-size: 12px;
+  }
+  .add-task-button {
+    font-size: 12px;
+  }
 }
